@@ -14,7 +14,6 @@ function loadPreloader() {
             link.href = addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.css');
             document.head.appendChild(link);
             console.log("Preloader loaded.");
-            checkPreloader();
         })
         .catch(error => {
             console.error('Error loading preloader:', error);
