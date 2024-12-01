@@ -7,7 +7,7 @@ function loadPreloader() {
     fetch(addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.html'))
         .then(response => response.text())
         .then(data => {
-            document.getElementById('preloader').innerHTML = data;
+            document.getElementById('preloader-container').innerHTML = data;
             const link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.css');
@@ -19,6 +19,8 @@ function loadPreloader() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    loadPreloader();
+    
     fetch(addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/navbar.html'))
         .then(response => response.text())
         .then(data => {
@@ -44,8 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error loading footer:', error);
         });
 });
-var loader = document.getElementById("preloader");
-window.addEventListener("load", function(){
-    loader.style.display = "none";
-    console.log("Done!");
-})
+
+// Chờ đến khi DOM hoàn tất tải xong
+window.addEventListener("load", function() {
+    var loader = document.getElementById("preloader");
+    if (loader) {
+        loader.style.display = "none";
+        console.log("Done!");
+    }
+});
