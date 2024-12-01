@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     z-index: 10000;
+    background-color: #fff; /* Thêm màu nền để che toàn bộ trang */
 }
 
 #preloader::before {
