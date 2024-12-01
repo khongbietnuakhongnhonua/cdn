@@ -1,0 +1,17 @@
+.footer {
+    color: #000000;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif; /* Sử dụng font Roboto cho phần chân trang */
+    position: relative;
+}
+
+.footer a {
+    color: inherit; /* Giữ màu sắc giống với màu chữ trong footer */
+    text-decoration: none; /* Bỏ gạch chân của liên kết */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Gạch chân liên kết khi hover */
+}
