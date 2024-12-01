@@ -70,10 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-window.addEventListener('load', function() {
-    hidePreloader(); // Ẩn preloader khi trang đã tải xong
-});
+// Đảm bảo preloader được ẩn đi khi trang tải xong hoặc khi trang được phục hồi từ cache
+window.addEventListener('load', hidePreloader);
+window.addEventListener('pageshow', hidePreloader);
 
-window.addEventListener('pageshow', function(event) {
-    hidePreloader(); // Ẩn preloader khi trang được phục hồi từ cache
-});
+// Thêm thời gian chờ tối đa để đảm bảo preloader được ẩn đi sau một khoảng thời gian nhất định
+setTimeout(hidePreloader, 10000); // 10 giây
