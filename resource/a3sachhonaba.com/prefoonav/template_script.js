@@ -21,16 +21,6 @@ function loadPreloader() {
         });
 }
 
-function checkPreloader() {
-    var loader = document.getElementById("preloader");
-    if (loader) {
-        console.log("Preloader element found.");
-    } else {
-        console.log("Preloader element not found.");
-        setTimeout(checkPreloader, 100); // Kiểm tra lại sau 100ms
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log("DOMContentLoaded event fired.");
     loadPreloader();
@@ -61,9 +51,4 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error loading footer:', error);
         });
-});
-
-// Đảm bảo preloader được ẩn đi khi trang tải xong hoặc khi trang được phục hồi từ cache
-window.addEventListener("load", function() {
-    checkPreloader();
 });
