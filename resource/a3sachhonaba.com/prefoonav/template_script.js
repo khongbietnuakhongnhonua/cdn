@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error loading footer:', error);
         });
-    hideloader();
 });
 
+window.addEventListener('load', function() {
+    console.log("Window loaded.");
+    hideloader(); // Chỉ gọi hideLoader sau khi toàn bộ trang đã tải xong
+});
