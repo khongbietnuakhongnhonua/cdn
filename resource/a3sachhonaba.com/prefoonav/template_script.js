@@ -71,14 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('load', function() {
-    if (sessionStorage.getItem('reloaded')) {
-        setTimeout(hidePreloader, 1000); // Giới hạn preloader trong 1 giây nếu trang đã load trước đó
-    } else {
-        hidePreloader();
-    }
+    hidePreloader(); // Ẩn preloader khi trang đã tải xong
 });
 
 window.addEventListener('pageshow', function(event) {
-    // Giới hạn preloader trong 1 giây nếu trang được phục hồi từ cache
-    setTimeout(hidePreloader, 1000);
+    hidePreloader(); // Ẩn preloader khi trang được phục hồi từ cache
 });
