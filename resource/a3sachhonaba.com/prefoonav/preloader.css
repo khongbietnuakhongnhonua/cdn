@@ -11,30 +11,31 @@
     background-color: #fff; /* Thêm màu nền để che toàn bộ trang */
 }
 
-#preloader::before {
+#preloader .loader-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Sắp xếp theo cột để logo và thanh loading nằm chính giữa */
+}
+
+#preloader .loader-container::before {
     content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 120px;
     height: 120px;
-    transform: translate(-50%, -50%);
     background: url('https://cdn.a3sachhonaba.com/resource/icon/a3sachhonaba.webp') no-repeat center center;
     background-size: contain;
 }
 
-#preloader::after {
+#preloader .loader-container::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100px;
     height: 100px;
-    transform: translate(-50%, -50%);
     border: 10px solid transparent;
     border-top: 10px solid #3498db;
     border-radius: 50%;
     animation: spin 2s linear infinite;
+    margin-top: 20px; /* Khoảng cách giữa logo và thanh loading */
 }
 
 @keyframes spin {
