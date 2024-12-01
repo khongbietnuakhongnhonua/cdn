@@ -13,24 +13,18 @@
 
 #preloader::before {
     content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    display: block;
     width: 120px;
     height: 120px;
-    transform: translate(-50%, -50%);
     background: url('https://cdn.a3sachhonaba.com/resource/icon/a3sachhonaba.webp') no-repeat center center;
     background-size: contain;
 }
 
 #preloader::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    display: block;
     width: 100px;
     height: 100px;
-    transform: translate(-50%, -50%);
     border: 10px solid transparent;
     border-top: 10px solid #3498db;
     border-radius: 50%;
