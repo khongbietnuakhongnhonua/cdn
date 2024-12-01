@@ -1,3 +1,13 @@
+function hideloader(){
+    var loader = document.getElementById("preloader");
+    if (loader) {
+        loader.style.display = "none";
+        console.log("Done!");
+    } else {
+        console.log("Preloader element not found.");
+    }
+}
+
 function addVersionToURL(url) {
     const version = new Date().getTime();
     return url + '?v=' + version;
@@ -50,4 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error loading footer:', error);
         });
+    hideloader();
 });
+
