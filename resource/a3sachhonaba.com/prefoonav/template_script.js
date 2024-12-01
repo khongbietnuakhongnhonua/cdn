@@ -12,7 +12,7 @@ function loadPreloader() {
             document.getElementById('preloader-container').innerHTML = data;
             const link = document.createElement('link');
             link.rel = 'stylesheet';
-            link.href = addVersionToURL('preloader.css');
+            link.href = addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.css');
             document.head.appendChild(link);
         })
         .catch(error => {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
             const script = document.createElement('script');
-            script.src = addVersionToURL('navbar.js');
+            script.src = addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/navbar.js');
             document.body.appendChild(script);
         })
         .catch(error => {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-container').innerHTML = data; // Nhúng nội dung vào footer-container
             const link = document.createElement('link');
             link.rel = 'stylesheet';
-            link.href = addVersionToURL('footer.css');
+            link.href = addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/footer.css');
             document.head.appendChild(link);
         })
         .catch(error => {
