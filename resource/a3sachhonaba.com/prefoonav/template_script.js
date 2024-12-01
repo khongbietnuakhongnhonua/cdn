@@ -14,10 +14,30 @@ function loadPreloader() {
             link.href = addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.css');
             document.head.appendChild(link);
             console.log("Preloader loaded.");
+            checkPreloader();
         })
         .catch(error => {
             console.error('Error loading preloader:', error);
         });
+}
+
+function checkPreloader() {
+    var loader = document.getElementById("preloader");
+    if (loader) {
+        console.log("Preloader element found.");
+        hidePreloader();
+    } else {
+        console.log("Preloader element not found.");
+        setTimeout(checkPreloader, 100); // Kiểm tra lại sau 100ms
+    }
+}
+
+function hidePreloader() {
+    var loader = document.getElementById("preloader");
+    if (loader) {
+        loader.style.display = "none";
+        console.log("Done!");
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -52,13 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-// Chờ đến khi DOM hoàn tất tải xong
+// Đảm bảo preloader được ẩn đi khi trang tải xong hoặc khi trang được phục hồi từ cache
 window.addEventListener("load", function() {
-    var loader = document.getElementById("preloader");
-    if (loader) {
-        loader.style.display = "none";
-        console.log("Done!");
-    } else {
-        console.log("Preloader element not found.");
-    }
+    checkPreloader();
 });
