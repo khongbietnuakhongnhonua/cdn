@@ -11,9 +11,15 @@
     background-color: #fff; /* Thêm màu nền để che toàn bộ trang */
 }
 
+#preloader .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #preloader::before {
     content: "";
-    display: block;
     width: 120px;
     height: 120px;
     background: url('https://cdn.a3sachhonaba.com/resource/icon/a3sachhonaba.webp') no-repeat center center;
@@ -22,13 +28,13 @@
 
 #preloader::after {
     content: "";
-    display: block;
     width: 100px;
     height: 100px;
     border: 10px solid transparent;
     border-top: 10px solid #3498db;
     border-radius: 50%;
     animation: spin 2s linear infinite;
+    margin-top: 20px;
 }
 
 @keyframes spin {
