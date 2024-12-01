@@ -40,6 +40,10 @@ function checkPageReload() {
     }
 }
 
+function dmLoad(){
+    $('<img src="https://cdn.a3sachhonaba.com/resource/icon/a3sachhonaba.webp">').appendTo('.paperLoading');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     checkPageReload();
     loadPreloader();
@@ -71,7 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Đảm bảo preloader được ẩn đi khi trang tải xong hoặc khi trang được phục hồi từ cache
-window.addEventListener('load', hidePreloader);
+window.addEventListener('load', function() {
+    dmLoad(); // Gọi hàm dmLoad() khi trang tải xong
+    hidePreloader();
+});
 window.addEventListener('pageshow', hidePreloader);
 
 // Thêm thời gian chờ tối đa để đảm bảo preloader được ẩn đi sau một khoảng thời gian nhất định
