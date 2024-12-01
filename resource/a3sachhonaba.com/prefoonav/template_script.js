@@ -6,7 +6,7 @@ function addVersionToURL(url) {
 }
 
 function loadPreloader() {
-    fetch(addVersionToURL('preloader.html'))
+    fetch(addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.html'))
         .then(response => response.text())
         .then(data => {
             document.getElementById('preloader-container').innerHTML = data;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     checkPageReload();
     loadPreloader();
     
-    fetch(addVersionToURL('navbar.html'))
+    fetch(addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/navbar.html'))
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error loading navbar:', error);
         });
 
-    fetch(addVersionToURL('footer.html'))
+    fetch(addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/footer.html'))
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data; // Nhúng nội dung vào footer-container
