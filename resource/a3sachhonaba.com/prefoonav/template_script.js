@@ -1,5 +1,3 @@
-// Kết hợp preloader.js và template_script.js
-
 function addVersionToURL(url) {
     const version = new Date().getTime();
     return url + '?v=' + version;
@@ -9,7 +7,7 @@ function loadPreloader() {
     fetch(addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.html'))
         .then(response => response.text())
         .then(data => {
-            document.getElementById('preloader-container').innerHTML = data;
+            document.getElementById('preloader').innerHTML = data;
             const link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = addVersionToURL('https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.css');
@@ -21,13 +19,8 @@ function loadPreloader() {
 }
 
 function hidePreloader() {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.classList.add('fade-out');
-        setTimeout(function() {
-            preloader.style.display = 'none';
-        }, 1000); // 1 giây để hoàn thành hiệu ứng fade-out
-    }
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
 }
 
 function checkPageReload() {
@@ -38,10 +31,6 @@ function checkPageReload() {
     } else {
         sessionStorage.removeItem('reloaded');
     }
-}
-
-function dmLoad(){
-    $('<img src="https://cdn.a3sachhonaba.com/resource/icon/a3sachhonaba.webp">').appendTo('.paperLoading');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -76,10 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Đảm bảo preloader được ẩn đi khi trang tải xong hoặc khi trang được phục hồi từ cache
 window.addEventListener('load', function() {
-    dmLoad(); // Gọi hàm dmLoad() khi trang tải xong
-    hidePreloader();
+    var loader = document.getElementById("preloader");
+    loader.style.display = "none";
 });
-window.addEventListener('pageshow', hidePreloader);
+window.addEventListener('pageshow', function() {
+    var loader = document.getElementById("preloader");
+    loader.style.display = "none";
+});
 
 // Thêm thời gian chờ tối đa để đảm bảo preloader được ẩn đi sau một khoảng thời gian nhất định
-setTimeout(hidePreloader, 10000); // 10 giây
+setTimeout(function() {
+    var loader = document.getElementById("preloader");
+    loader.style.display = "none";
+}, 10000); // 10 giây
