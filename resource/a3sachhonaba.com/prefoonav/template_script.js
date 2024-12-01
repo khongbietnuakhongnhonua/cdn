@@ -25,18 +25,9 @@ function checkPreloader() {
     var loader = document.getElementById("preloader");
     if (loader) {
         console.log("Preloader element found.");
-        hidePreloader();
     } else {
         console.log("Preloader element not found.");
         setTimeout(checkPreloader, 100); // Kiểm tra lại sau 100ms
-    }
-}
-
-function hidePreloader() {
-    var loader = document.getElementById("preloader");
-    if (loader) {
-        loader.style.display = "none";
-        console.log("Done!");
     }
 }
 
