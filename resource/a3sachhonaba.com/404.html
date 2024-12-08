@@ -1,170 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A3 Sạch Hơn Aba - 404</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.a3sachhonaba.com/resource/icon/a3sachhonaba.webp">
+    <link rel="stylesheet" href="https://cdn.a3sachhonaba.com/resource/a3sachhonaba.com/prefoonav/preloader.css">
+    <title>A3 Sạch Hơn Aba - Không tìm thấy trang!</title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
-        @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
-        .error-container {
-        text-align: center;
-        font-size: 106px;
-        font-family: 'Catamaran', sans-serif;
-        font-weight: 800;
-        margin: 70px 15px;
-        }
-        .error-container > span {
-        display: inline-block;
-        position: relative;
-        }
-        .error-container > span.four {
-        width: 136px;
-        height: 43px;
-        border-radius: 999px;
-        background:
-            linear-gradient(140deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 43%, transparent 44%, transparent 100%),
-            linear-gradient(105deg, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.06) 41%, rgba(0, 0, 0, 0.07) 76%, transparent 77%, transparent 100%),
-            linear-gradient(to right, #d89ca4, #e27b7e);
-        }
-        .error-container > span.four:before,
-        .error-container > span.four:after {
-        content: '';
-        display: block;
-        position: absolute;
-        border-radius: 999px;
-        }
-        .error-container > span.four:before {
-        width: 43px;
-        height: 156px;
-        left: 60px;
-        bottom: -43px;
-        background:
-            linear-gradient(128deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 40%, transparent 41%, transparent 100%),
-            linear-gradient(116deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 50%, transparent 51%, transparent 100%),
-            linear-gradient(to top, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
-        }
-        .error-container > span.four:after {
-        width: 137px;
-        height: 43px;
-        transform: rotate(-49.5deg);
-        left: -18px;
-        bottom: 36px;
-        background: linear-gradient(to right, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
-        }
-
-        .error-container > span.zero {
-        vertical-align: text-top;
-        width: 156px;
-        height: 156px;
-        border-radius: 999px;
-        background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.06) 50%,  transparent 51%, transparent 100%),
-            linear-gradient(to top right, #99749D, #99749D, #B895AB, #CC9AA6, #D7969E, #ED8687, #ED8687);
-        overflow: hidden;
-        animation: bgshadow 5s infinite;
-        }
-        .error-container > span.zero:before {
-        content: '';
-        display: block;
-        position: absolute;
-        transform: rotate(45deg);
-        width: 90px;
-        height: 90px;
-        background-color: transparent;
-        left: 0px;
-        bottom: 0px;
-        background:
-            linear-gradient(95deg, transparent 0%, transparent 8%, rgba(0, 0, 0, 0.07) 9%, transparent 50%, transparent 100%),
-            linear-gradient(85deg, transparent 0%, transparent 19%, rgba(0, 0, 0, 0.05) 20%, rgba(0, 0, 0, 0.07) 91%, transparent 92%, transparent 100%);
-        }
-        .error-container > span.zero:after {
-        content: '';
-        display: block;
-        position: absolute;
-        border-radius: 999px;
-        width: 70px;
-        height: 70px;
-        left: 43px;
-        bottom: 43px;
-        background: #FDFAF5;
-        box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.1);
-        }
-
-        .screen-reader-text {
-            position: absolute;
-            top: -9999em;
-            left: -9999em;
-        }
-            
-        @keyframes bgshadow {
-        0% {
-            box-shadow: inset -160px 160px 0px 5px rgba(0, 0, 0, 0.4);
-        }
-        45% {
-            box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-        }
-        55% {
-            box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-        }
-        100% {
-            box-shadow: inset 160px -160px 0px 5px rgba(0, 0, 0, 0.4);
-        }
-        }
-
-        /* demo stuff */
-        * {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        body {
-        background-color: #FDFAF5;
-        margin-bottom: 50px;
-        }
-        html, button, input, select, textarea {
-            font-family: 'Montserrat', Helvetica, sans-serif;
-            color: #bbb;
-        }
-        h1 {
-        text-align: center;
-        margin: 30px 15px;
-        }
-        .zoom-area { 
-        max-width: 490px;
-        margin: 30px auto 30px;
-        font-size: 19px;
-        text-align: center;
-        }
-        .link-container {
-        text-align: center;
-        }
-        a.more-link {
-        text-transform: uppercase;
-        font-size: 13px;
-            background-color: #de7e85;
-            padding: 10px 15px;
-            border-radius: 0;
+        body{
+            margin:0;
+            padding:0;
+            font-family: 'Tomorrow', sans-serif;
+            height:100vh;
+            background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            overflow:hidden;
+            }
+        .text{
+            position:absolute;
+            top:10%;
+            color:#fff;
+            text-align:center;
+            }
+        a{
             color: #fff;
-            display: inline-block;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            line-height: 1.5;
-            text-decoration: none;
-        margin-top: 50px;
-        letter-spacing: 1px;
         }
+        h1{
+            font-size:50px;
+            }
+        .star{
+            position:absolute;
+            width:2px;
+            height:2px;
+            background:#fff;
+            right:0;
+            animation:starTwinkle 3s infinite linear;
+            }
+        .astronaut img{
+            width:100px;
+            position:absolute;
+            top:55%;
+            animation:astronautFly 6s infinite linear;
+            }
+        @keyframes astronautFly{
+            0%{
+                left:-100px;
+            }
+            25%{
+                top:50%;
+                transform:rotate(30deg);
+            }
+            50%{
+                transform:rotate(45deg);
+                top:55%;
+            }
+            75%{
+                top:60%;
+                transform:rotate(30deg);
+            }
+            100%{
+                left:110%;
+                transform:rotate(45deg);
+            }
+            }
+        @keyframes starTwinkle{
+            0%{
+                background:rgba(255,255,255,0.4);
+            }
+            25%{
+                background:rgba(255,255,255,0.8);
+            }
+            50%{
+            background:rgba(255,255,255,1);
+            }
+            75%{
+                background:rgba(255,255,255,0.8);
+            }
+            100%{
+                background:rgba(255,255,255,0.4);
+            }
+            }
     </style>
 </head>
 <body>
-    <h1>404 - Không tìm thấy trang!</h1>
-    <p class="zoom-area">Mình khá chắc là nó từng tồn tại ở đây nhưng giờ thì nó đã biến mất vào hư không :(.</p>
-    <section class="error-container">
-        <span class="four"><span class="screen-reader-text">4</span></span>
-        <span class="zero"><span class="screen-reader-text">0</span></span>
-        <span class="four"><span class="screen-reader-text">4</span></span>
-    </section>
-    <div class="link-container">
-    <a target="_blank" href="https://thunghiem.a3sachhonaba.com/" class="more-link">Về trang chủ</a>
-</div>
+    <div class="text">
+        <div>Bạn đã bị đá bay ra ngoài không gian!!!</div>
+        <h1>404</h1>
+        <hr>
+        <div><a href="https://thunghiem.a3sachhonaba.com/">Hãy lên phi thuyền mau, sắp full slot rồi!!!</a></div>
+      </div>
+      
+      <div class="astronaut">
+        <img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" alt="" class="src">
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded",function(){
+        var body=document.body;
+        setInterval(createStar,100);
+        function createStar(){
+            var right=Math.random()*500;
+            var top=Math.random()*screen.height;
+            var star=document.createElement("div");
+        star.classList.add("star")
+        body.appendChild(star);
+        setInterval(runStar,10);
+            star.style.top=top+"px";
+        function runStar(){
+            if(right>=screen.width){
+            star.remove();
+            }
+            right+=3;
+            star.style.right=right+"px";
+        }
+        } 
+        })
+      </script>
 </body>
 </html>
